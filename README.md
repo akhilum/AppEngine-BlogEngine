@@ -22,6 +22,7 @@ Its a very simple script that handles different aspects like :-
 </div>
 
 This script returns a dictionary with the following values to Junja template engine
+<pre>
 template_values = {     'articles' : articles ,
                         'num_articles' : len(articles),
                         'limit' : limit,
@@ -35,7 +36,7 @@ template_values = {     'articles' : articles ,
                         'blog_name' = self.app.config.get(blog_id)['name'],
                         'blog_desc' = self.app.config.get(blog_id)['desc']
                   }
-                  
+</pre>                  
 Here article is a blog post
 
 Which will be instasiated as per the following rules:-
