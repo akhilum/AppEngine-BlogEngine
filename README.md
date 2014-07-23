@@ -10,7 +10,8 @@ This simple script allows you to host blogs on your Google App Engine website. J
 USAGE:-<br/>
 <em> Its as easy as 1,2,3 </em>
 
-1. Create an <a href="https://developers.google.com/appengine/docs/python/gettingstartedpython27/introduction">App Engine App</a>. place blog.py into your main folder and into your app.yaml file add the following entry
+<ol>
+<li>Create an <a href="https://developers.google.com/appengine/docs/python/gettingstartedpython27/introduction">App Engine App</a>. place blog.py into your main folder and into your app.yaml file add the following entry
 
 <pre>
 handlers:
@@ -18,11 +19,15 @@ handlers:
   script: blog.application
 </pre>
 
-2. Goto blog.py file. Search for "CONFIGS" at the top of the file.
-     in the blog_config array make an entry for each of the blog you wanna make.
+</li>
 
-3. make a directory called templates/ add blog_<Your_blog_id>.html file there which is used to render the blog.
+<li>Goto blog.py file. Search for "CONFIGS" at the top of the file.<br/>
+     in the blog_config array make an entry for each of the blog you wanna make.</li>
+
+<li>make a directory called templates/ add blog_<Your_blog_id>.html file there which is used to render the blog.<br/>
      so if your blog_id is called 'abcd' add blog_abcd.html there.
+</li>
+</ol>
 
 
 
