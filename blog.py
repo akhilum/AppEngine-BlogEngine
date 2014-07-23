@@ -141,7 +141,7 @@ class Comments(ndb.Model):
 class BlogPage(webapp2.RequestHandler):
     def get(self, blog_id):
         if not blog_id in self.app.config.keys():
-            self.redirect('/style/404.html')
+            self.redirect('/')
             return
         unique_id = self.request.get('unique_id')
         lim = self.request.get('lim')
@@ -169,7 +169,7 @@ class BlogPage(webapp2.RequestHandler):
 class AdminBlogPage(webapp2.RequestHandler):
     def get(self, blog_id):
         if not blog_id in self.app.config.keys():
-            self.redirect('/style/404.html')
+            self.redirect('/')
             return
         unique_id = self.request.get('unique_id')
         lim = self.request.get('lim')
@@ -212,7 +212,7 @@ class SaveBlog(webapp2.RequestHandler):
     '''
     def post(self, blog_id):
         if not blog_id in self.app.config.keys():
-            self.redirect('/style/404.html')
+            self.redirect('/')
             return
         user_name = users.get_current_user()
         is_draft = True
@@ -295,7 +295,6 @@ application = webapp2.WSGIApplication([
     (r'/blogsadmin/(.*)/blog/save', SaveBlog),
     (r'/blogsadmin/(.*)/blog/delete', DeleteBlog),
 ], config=blog_config, debug=True)
-#    (r'/blogsadmin/(.*)/blog/edit', EditBlog),
 
 ##################################################################################
 
